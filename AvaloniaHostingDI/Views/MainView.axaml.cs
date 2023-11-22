@@ -12,6 +12,7 @@ public partial class MainView : UserControl
 
     public MainView()
     {
+        // The App.GetService<T>() method is used to retrieve services from the DI container.
         ViewModel = App.GetService<MainViewModel>();
         DataContext = ViewModel;
         InitializeComponent();        

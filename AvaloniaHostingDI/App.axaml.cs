@@ -5,7 +5,6 @@ using AvaloniaHostingDI.ViewModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SkiaSharp;
 using System;
 
 namespace AvaloniaHostingDI;
@@ -27,7 +26,7 @@ public partial class App : Application
     {
         if ((App.Current as App)!.AppHost.Services.GetService(typeof(T)) is not T service)
         {
-            throw new ArgumentException($"{typeof(T)} needs to be registered in ConfigureServices within App.xaml.cs.");
+            throw new ArgumentException($"{typeof(T)} needs to be registered in ConfigureServices within App.axaml.cs.");
         }
 
         return service;
@@ -43,7 +42,7 @@ public partial class App : Application
                 // Register services with the DI container here.
                 services.AddTransient<MainViewModel>();
 
-                // read a section from appsettings.json, place a breakpint on the next line to see the value
+                // read a section from appsettings.json, place a breakpoint on the next line to see the value
                 var x = context.Configuration.GetConnectionString("sqlConnection");
 
             })
