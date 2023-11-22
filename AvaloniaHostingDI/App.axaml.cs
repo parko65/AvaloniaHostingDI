@@ -21,7 +21,7 @@ public partial class App : Application
         get;
     }
 
-    // Check if the service is registered in ConfigureServices within App.xaml.cs.
+    // Check if the service is registered in ConfigureServices within App.axaml.cs.
     public static T GetService<T>()
         where T : class
     {
