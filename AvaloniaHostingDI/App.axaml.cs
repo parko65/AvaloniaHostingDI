@@ -47,6 +47,9 @@ public partial class App : Application
 
             })
             .Build();
+
+        // Start the host
+        AppHost.Start();
             
     }
 
